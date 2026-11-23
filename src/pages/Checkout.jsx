@@ -35,7 +35,7 @@ export default function Checkout() {
       // 2) Poll the STK Push Query every 3s (up to 90s)
       let status = { state: "PENDING" };
       for (let i = 0; i < 30 && status.state === "PENDING"; i++) {
-        await sleep(3000);
+        await sleep(8000);
         status = await (await fetch("/api/status?id=" + start.checkoutId)).json();
       }
       if (status.state === "FAILED") throw new Error(status.reason || "Payment was cancelled or failed.");
