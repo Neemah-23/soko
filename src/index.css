@@ -1,0 +1,70 @@
+:root{
+  --indigo:#1f2a5a; --saffron:#f2b632; --chalk:#f6f7fb; --ink:#1c1d26;
+  --hibiscus:#c8325b; --line:#dfe2ee; --muted:#656a82;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"DM Sans",system-ui,sans-serif;background:var(--chalk);color:var(--ink);line-height:1.5}
+h1,h2,h3,.logo{font-family:"Bricolage Grotesque",system-ui,sans-serif;margin:0}
+a{color:var(--indigo)}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+main.container{padding-top:24px;padding-bottom:60px}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:2px}
+
+.nav{background:var(--indigo);position:sticky;top:0;z-index:10}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{color:var(--saffron);font-size:1.7rem;font-weight:800;text-decoration:none}
+.nav nav{display:flex;gap:18px;align-items:center}
+.nav a,.nav .link{color:#fff;text-decoration:none;font-weight:500}
+.nav a.active{color:var(--saffron)}
+.nav a.btn{color:var(--indigo)}
+.badge{background:var(--saffron);color:var(--indigo);border-radius:99px;padding:0 7px;margin-left:6px;font-size:.78rem;font-weight:700}
+
+.btn{display:inline-block;background:var(--saffron);color:var(--indigo);border:0;border-radius:8px;padding:12px 20px;font:700 1rem "DM Sans",sans-serif;cursor:pointer;text-decoration:none}
+.btn:hover{filter:brightness(.95)} .btn:disabled{opacity:.6;cursor:wait}
+.btn.small{padding:8px 14px;font-size:.9rem}
+.link{background:none;border:0;color:var(--hibiscus);cursor:pointer;font:inherit;padding:0}
+
+.hero{background:var(--indigo);color:#fff;border-radius:16px;padding:48px 36px;margin-bottom:24px}
+.hero h1{font-size:clamp(1.8rem,4.5vw,3rem);max-width:640px;line-height:1.08;font-weight:800}
+.hero p{color:#c9cdea;max-width:520px;margin:14px 0 0}
+
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.filters input{flex:1;min-width:180px}
+input,select{padding:11px 12px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff;width:100%}
+.filters select{width:auto}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--line)}
+.card-body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cat{color:var(--hibiscus);font-size:.85rem;font-weight:700}
+.card h3{font-size:1.1rem}
+.desc{color:var(--muted);font-size:.92rem;margin:0;flex:1}
+.card-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:8px}
+
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+.panel h2{margin-bottom:16px}
+.narrow{max-width:460px;margin:20px auto;display:flex;flex-direction:column;gap:14px}
+.center{text-align:center;align-items:center}
+label{display:flex;flex-direction:column;gap:5px;font-weight:500;font-size:.95rem}
+.error{color:var(--hibiscus);margin:0;font-weight:500}
+.notice{background:#fff7e0;border:1px solid var(--saffron);padding:12px;border-radius:8px;margin:0}
+.muted{color:var(--muted);margin:0;font-size:.92rem}
+.empty{text-align:center;padding:60px 0;color:var(--muted);display:flex;flex-direction:column;gap:14px;align-items:center}
+
+.row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.row img{width:64px;height:64px;object-fit:cover;border-radius:8px}
+.grow{flex:1;min-width:140px}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:32px;height:32px;border-radius:8px;border:1px solid var(--line);background:#fff;font-size:1.1rem;cursor:pointer}
+.line{min-width:100px;text-align:right}
+.total{display:flex;justify-content:space-between;font-size:1.2rem;padding:16px 0}
+.summary{list-style:none;padding:0;margin:0}
+.summary li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed var(--line)}
+.order{padding:14px 0;border-bottom:1px solid var(--line)}
+.order-head{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.order-head .line{margin-left:auto}
+.pill{background:#e3f6ea;color:#14663a;padding:2px 10px;border-radius:99px;font-size:.82rem;font-weight:700}
+
+@media (max-width:600px){.hero{padding:30px 22px}.nav nav{gap:12px;font-size:.92rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
